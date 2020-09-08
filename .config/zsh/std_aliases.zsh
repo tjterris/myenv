@@ -74,9 +74,10 @@ alias selon='sudo setenforce 1'
 ## editors
 
 alias nz='nvim ~/.zshrc'
-alias na='nvim ~/.config/zsh/aliases.zsh'
+alias nzp='nvim ~/.zprofile'
+alias na='nvim ~/.config/zsh/std_aliases.zsh'
 alias ns='nvim ~/.secrets'
-alias nv_conf='nvim ~/.config/nvim/init.vim'
+alias nv='nvim ~/.config/nvim/init.vim'
 
 ## git
 
@@ -109,7 +110,6 @@ alias tmk="tmux kill-session -t"
 
 ## misc shell 
 
-alias cat='bat'
 alias apr='apropos'
 alias pnf='pinfo'
 alias top='htop'

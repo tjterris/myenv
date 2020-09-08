@@ -54,7 +54,7 @@ font:
 
 window:
   decorations: none
-  # startup_mode: Fullscreen # Maximized or Windowed
+  startup_mode: Maximized # Maximized or Windowed
   dynamic_title: true
   padding:
     x: 2
@@ -106,6 +106,8 @@ vi_mode_cursor:
 cursor:
   style: Block # Underline or Beam
 
-url:
-  launcher: 
-    program: firefox
+mouse:
+  double_click: { threshold: 300 }
+  url:
+    launcher: 
+      program: firefox
