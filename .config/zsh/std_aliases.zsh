@@ -26,6 +26,10 @@ alias rgc='rvm gemset create'
 alias rgl='rvm gemset list'
 alias rgd='rvm gemset delete'
 
+## python
+
+alias pe='pipenv'
+
 ## helm
 
 alias hls='helm list --tls --tiller-namespace=tiller-system -d'

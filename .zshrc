@@ -24,5 +24,4 @@ fi
 ## enable poetry autocomplete ~/.zfunc/_poetry
 fpath+=~$HOME/.config/zsh/.zfunc
 
-
 #bindkey -v
