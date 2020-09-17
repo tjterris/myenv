@@ -10,10 +10,11 @@ export PATH=$PATH:$PYENV_ROOT/bin
 export PATH=$PATH:$HOME/.fzf/bin
 export PATH=$PATH:$HOME/.poetry/bin
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_THEME="honukai"
 
-
+export PROMPT_COMMAND="good_history"
 export RIPGREP_CONFIG_PATH=$HOME/.config/.ripgreprc
-#export FZF_DEFAULT_COMMAND="fd --follow --exclude '.git' --exclude 'node_modules' --hidden"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_DEFAULT_OPTS="
 --layout=reverse
 --info=inline
@@ -32,6 +33,7 @@ export FZF_DEFAULT_OPTS="
 
 export HISTSIZE=500000
 export HISTFILESIZE=100000000
-export HISTORY_IGNORE='(ls*|ll*|pwd|cat*|echo*|cd ..*|history|gst*|ga *|sz|nz|nzp|v*|which *|man *|fzf)'
+export HISTORY_IGNORE='(ls*|ll*|pwd|echo*|cd ..*|history|gst*|ga *|sz|nz|nzp|v*|which *|man *|fzf|gplom|gckm|nuc|tmux*|tmn*|tma*|ntm*|tmls|tmk*|make)'
+export HIST_STAMPS="mm/dd/yyyy"
 
 export KUBE_EDITOR="nvim"

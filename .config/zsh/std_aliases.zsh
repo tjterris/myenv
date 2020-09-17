@@ -6,6 +6,11 @@ alias sfcwd='sudo find ./ -name'
 alias k9='kill -9'
 alias jcxe='journalctl -xe'
 alias wifiup="sudo systemctl stop network-manager && sudo systemctl start network-manager && sudo systemctl reload network-manager"
+alias apr='apropos'
+alias pnf='pinfo'
+alias top='htop'
+alias open='xdg-open'
+#alias history="history | fzf"
 
 ## ssh
 
@@ -34,9 +39,8 @@ alias pe='pipenv'
 
 alias hls='helm list --tls --tiller-namespace=tiller-system -d'
 
-## distro shortcuts
+## distro
 
-#alias open='gnome-open'
 #alias sas='sudo apt search'
 #alias sagu='sudo apt-get update'
 #alias sagi="sudo apt-get install"
@@ -75,13 +79,16 @@ alias dkrmunti='docker rmi -f $(docker images -q --filter "dangling=true")'
 alias seloff='sudo setenforce 0'
 alias selon='sudo setenforce 1'
 
-## editors
+## neovim
 
 alias nz='nvim ~/.zshrc'
 alias nzp='nvim ~/.zprofile'
 alias na='nvim ~/.config/zsh/std_aliases.zsh'
 alias ns='nvim ~/.secrets'
 alias nv='nvim ~/.config/nvim/init.vim'
+alias nvs='nvim ~/.config/nvim/general/settings.vim'
+alias v='nvim'
+alias vi='nvim'
 
 ## git
 
@@ -106,20 +113,20 @@ alias gd='git diff'
 
 ## tmux
 
-alias tm="tmux"
-alias tmn="tmux new -s"
+alias tm="tmux ~/.config/tmux.conf"
+alias tmn="tmux new -f ~/.config/tmux.conf -s"
 alias tmls="tmux list-sessions"
 alias tma="tmux attach -t"
 alias tmk="tmux kill-session -t" 
+alias tmkser="tmux kill-server"
+alias ntm="nvim ~/.config/tmux.conf"
+alias stm="tmux source-file ~/.tmux.conf"
 
-## misc shell 
+## zsh
 
-alias apr='apropos'
-alias pnf='pinfo'
-alias top='htop'
 alias sz='source ~/.zshrc'
 
-## utility aliases
+## random utilities
 
 alias digip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias curlip='curl ifconfig.me'
@@ -146,7 +153,7 @@ alias tfwsel='terraform workspace select'
 alias tfwdel='terraform workspace delete'
 alias tfwsho='terraform workspace show'
 
-### kubernetes
+### k8s
 
 alias kctl='kubectl'
 alias kconf='nvim ~/.kube/config'
@@ -183,7 +190,4 @@ alias knode="kctl get nodes -w"
 alias kresources="kubectl api-resources"
 
 
-## nvim
 
-alias v='nvim'
-alias vi='nvim'

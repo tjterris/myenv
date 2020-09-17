@@ -14,11 +14,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   else
 
     " Themes
-   " Plug 'arcticicestudio/nord-vim'
     Plug 'joshdick/onedark.vim'
 
     " autocomplete 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+   " Plug 'OmniSharp/omnisharp-vim'
+"   Plug 'neovim/nvim-lspconfig'
 
     " Sneak
     "  Plug 'justinmk/vim-sneak'
@@ -27,13 +28,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    " Plug 'editorconfig/editorconfig-vim'
    
     " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
+"    Plug 'sheerun/vim-polyglot'
    
     " Status Line
 "    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-   
+  
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'

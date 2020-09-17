@@ -29,7 +29,7 @@ colors:
     cyan: "#56b6c2"
     white: "#ffffff"
 
-background_opacity: .9
+background_opacity: .95
 
 font:
   normal:
@@ -67,7 +67,7 @@ window:
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 10000
+  history: 100000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).

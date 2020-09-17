@@ -10,16 +10,14 @@ if exists('g:vscode')
 else
 
   " Themes
-"  source $HOME/.config/nvim/themes/nord.vim
   source $HOME/.config/nvim/themes/airline.vim
   source $HOME/.config/nvim/themes/onedark.vim
 
   " Plugin Configuration
   source $HOME/.config/nvim/plug-config/fzf.vim
+  source $HOME/.config/nvim/plug-config/coc.vim
+"  source $HOME/.config/nvim/plug-config/polyglot.vim
 "  source $HOME/.config/nvim/plug-config/sneak.vim
-
-  "source $HOME/.config/nvim/plug-config/floaterm.vim
-  source $HOME/.config/nvim/plug-config/polyglot.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 endif

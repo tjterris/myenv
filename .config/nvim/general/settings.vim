@@ -14,7 +14,8 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set laststatus=2                        " Always display the status line
-set relativenumber
+set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+set relativenumber                      " Rel line numbers
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
