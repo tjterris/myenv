@@ -15,7 +15,8 @@ else
 
   " Plugin Configuration
   source $HOME/.config/nvim/plug-config/fzf.vim
-  source $HOME/.config/nvim/plug-config/coc.vim
+  source $HOME/.config/nvim/plug-config/ale.vim
+"  source $HOME/.config/nvim/plug-config/coc.vim
 "  source $HOME/.config/nvim/plug-config/polyglot.vim
 "  source $HOME/.config/nvim/plug-config/sneak.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua

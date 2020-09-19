@@ -1,35 +1,35 @@
-zmodload zsh/zprof
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 
 [ -f $HOME/.oh-my-zsh/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -f $HOME/.config/zsh/std_aliases.zsh ] && source $HOME/.config/zsh/std_aliases.zsh
-[ -f $HOME/.config/zsh/fzf.zsh ] && source $HOME/.config/zsh/fzf.zsh
 [ -f $HOME/.secrets ] && source $HOME/.secrets
-[ ! -f $HOME/.tmux.conf ] && ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf 
+[ -d $HOME/.config/zsh ] && for f in $HOME/.config/zsh/*.zsh; do source $f; done
+
+# Put tmux conf in path tmux wants
+[ ! -f $HOME/.tmux.conf ] && ln -s \
+       $HOME/.config/tmux/tmux.conf \
+       $HOME/.tmux.conf
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[ ! -f $HOME/.p10k.zsh ] && ln -s \
+       $HOME/.config/zsh/.p10k.zsh \
+       $HOME/.p10k.zsh
+
+[ -f $HOME/.p10k.zsh ] && source $HOME/.p10k.zsh
 
 ## auto complete features for kubectl and helm
-if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
-if [ $commands[helm] ]; then source <(helm completion zsh); fi
-
-## removes duplicate entries from PATH, if any exist
-typeset -aU path
+[ $commands[kubectl] ] && source <(kubectl completion zsh)
+[ $commands[helm] ] && source <(helm completion zsh)
 
 ## initialize pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-## enable poetry autocomplete ~/.zfunc/_poetry
-fpath+=~$HOME/.config/zsh/.zfunc
-
-good_history(){ 
-  exit_status=$?
-  if ((!exit_status)); then 
-     history 1 >> ~/.zsh_history.0
-  fi
-}
-
-#if [ -z "$TMUX" ]; then
-#    tmux attach -t default || tmux new -s default
-#fi
-
+# add and enable custom completion scripts
+fpath+=$HOME/.config/zsh/zfunc && compinit

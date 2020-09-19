@@ -38,6 +38,8 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 nnoremap zz :update<CR>
 nnoremap QQ :q!<CR>
 
+"nmap <leader>p O<ESC>p
+"nmap <leader>p o<ESC>P
 "Better window navigation
 "nnoremap <C-h> <C-w>h
 "nnoremap <C-j> <C-w>j

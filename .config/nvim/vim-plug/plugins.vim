@@ -17,10 +17,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
 
     " autocomplete 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
    " Plug 'OmniSharp/omnisharp-vim'
 "   Plug 'neovim/nvim-lspconfig'
-
+    Plug 'dense-analysis/ale'
     " Sneak
     "  Plug 'justinmk/vim-sneak'
 
@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    
     " Better Syntax Support
 "    Plug 'sheerun/vim-polyglot'
-   
+    Plug 'cespare/vim-toml'  
     " Status Line
 "    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'vim-airline/vim-airline'

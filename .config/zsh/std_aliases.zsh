@@ -1,16 +1,27 @@
-## linux system
+## misc
 
 alias dsknfo='sudo fdisk -l'
 alias sfroot='sudo find / -name'
-alias sfcwd='sudo find ./ -name'
+alias sf.='sudo find ./ -name'
 alias k9='kill -9'
 alias jcxe='journalctl -xe'
-alias wifiup="sudo systemctl stop network-manager && sudo systemctl start network-manager && sudo systemctl reload network-manager"
+alias wifiup="sudo systemctl stop network-manager && \
+		sudo systemctl start network-manager && \
+		  sudo systemctl reload network-manager"
 alias apr='apropos'
 alias pnf='pinfo'
 alias top='htop'
 alias open='xdg-open'
-#alias history="history | fzf"
+alias ps-aux='ps aux | fzf'
+alias cpu='ps -eo pcpu,pid,user,args | sort -k1 -r -n | head -10'
+alias ports='sudo lsof -i -P -n'
+alias nz='nvim ~/.zshrc'
+alias ns='nvim ~/.secrets'
+alias nzp='nvim ~/.zprofile'
+alias digip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias curlip='curl ifconfig.me'
+alias spd="wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py && chmod +x speedtest-cli && ./speedtest-cli"
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 ## ssh
 
@@ -39,7 +50,7 @@ alias pe='pipenv'
 
 alias hls='helm list --tls --tiller-namespace=tiller-system -d'
 
-## distro
+## distro pkg mgr
 
 #alias sas='sudo apt search'
 #alias sagu='sudo apt-get update'
@@ -81,10 +92,7 @@ alias selon='sudo setenforce 1'
 
 ## neovim
 
-alias nz='nvim ~/.zshrc'
-alias nzp='nvim ~/.zprofile'
 alias na='nvim ~/.config/zsh/std_aliases.zsh'
-alias ns='nvim ~/.secrets'
 alias nv='nvim ~/.config/nvim/init.vim'
 alias nvs='nvim ~/.config/nvim/general/settings.vim'
 alias v='nvim'
@@ -113,25 +121,22 @@ alias gd='git diff'
 
 ## tmux
 
-alias tm="tmux ~/.config/tmux.conf"
-alias tmn="tmux new -f ~/.config/tmux.conf -s"
+alias tm="tmux -f ~/.config/tmux/tmux.conf"
+alias tmn="tmux new -f ~/.config/tmux/tmux.conf -s"
 alias tmls="tmux list-sessions"
 alias tma="tmux attach -t"
 alias tmk="tmux kill-session -t" 
 alias tmkser="tmux kill-server"
-alias ntm="nvim ~/.config/tmux.conf"
-alias stm="tmux source-file ~/.tmux.conf"
+alias ntm="nvim ~/.config/tmux/tmux.conf"
+alias stm="tmux source-file ~/.config/tmux/tmux.conf"
+
+## alacritty 
+
+alias nala="nvim ~/.config/alacritty/alacritty.yml"
 
 ## zsh
 
 alias sz='source ~/.zshrc'
-
-## random utilities
-
-alias digip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias curlip='curl ifconfig.me'
-alias spd="wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py && chmod +x speedtest-cli && ./speedtest-cli"
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 
 ## aws-creds tools
