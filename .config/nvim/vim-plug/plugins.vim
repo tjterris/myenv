@@ -39,7 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
    
     " Git
-    Plug 'tpope/vim-fugitive'
+    "Plug 'tpope/vim-fugitive'
 
     " File explorer
 "    Plug 'kevinhwang91/rnvimr'

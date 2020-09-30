@@ -16,6 +16,7 @@ alias ps-aux='ps aux | fzf'
 alias cpu='ps -eo pcpu,pid,user,args | sort -k1 -r -n | head -10'
 alias ports='sudo lsof -i -P -n'
 alias nz='nvim ~/.zshrc'
+alias np='nvim ~/eid/environment/aws/.params'
 alias ns='nvim ~/.secrets'
 alias nzp='nvim ~/.zprofile'
 alias digip='dig +short myip.opendns.com @resolver1.opendns.com'
@@ -45,6 +46,7 @@ alias rgd='rvm gemset delete'
 ## python
 
 alias pe='pipenv'
+alias po='poetry'
 
 ## helm
 
