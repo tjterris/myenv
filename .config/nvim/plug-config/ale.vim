@@ -3,6 +3,7 @@ let g:ale_disable_lsp = 1
 "let g:ale_python_black_options = 'run black'
 let g:ale_linters = {
       \   'python': ['flake8'],
+      \   'sh' : ['language-server'],
       \   'ruby': ['rubocop'],
       \   'javascript': ['eslint'],
       \}

@@ -7,6 +7,9 @@ fi
 
 [ -f $HOME/.oh-my-zsh/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.secrets ] && source $HOME/.secrets
+[ -f $HOME/eid/environment/aws/.params ] && source $HOME/eid/environment/aws/.params
+[ -f $HOME/eid/environment/aws/.sshparams ] && source $HOME/eid/environment/aws/.sshparams
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 [ -d $HOME/.config/zsh ] && for f in $HOME/.config/zsh/*.zsh; do source $f; done
 
 # Put tmux conf in path tmux wants
@@ -14,12 +17,15 @@ fi
        $HOME/.config/tmux/tmux.conf \
        $HOME/.tmux.conf
 
+#[ $commands[tmux] ] && tmux source $HOME/.config/tmux/tmux.conf 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [ ! -f $HOME/.p10k.zsh ] && ln -s \
        $HOME/.config/zsh/.p10k.zsh \
        $HOME/.p10k.zsh
 
-[ -f $HOME/.p10k.zsh ] && source $HOME/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # auto complete features for kubectl and helm
 [ $commands[kubectl] ] && source <(kubectl completion zsh)
@@ -43,3 +49,5 @@ fpath+=$HOME/.config/zsh/zfunc && compinit
 #bindkey '^w' backward-kill-word
 bindkey '^f' forward-word
 bindkey '^b' backward-word
+
+

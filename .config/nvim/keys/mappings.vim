@@ -7,6 +7,8 @@ let mapleader=","
 vnoremap < <gv
 vnoremap > >gv
 
+" Not sure what this does but groked it from Primeagean
+vnoremap <leader>p "_dP
 
 " Better nav for omnicomplete
 "inoremap <expr> <c-j> ("\<C-n>")

@@ -21,23 +21,25 @@ set backspace=start,eol,indent
 set background=dark                     " tell vim what the background color looks like
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set autochdir                           " Your working directory will always be the same as your working directory
-set updatetime=300                      " Faster completion
+set updatetime=300                      " Faster completion, ideal for coc
 "set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set noswapfile
-set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
+set shortmess+=c                        " Don't pass messages to ins-completion-menu, ideal for coc
 set ignorecase
 set smartcase
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set termguicolors                       " Required for colorizer
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow " use ripgrep instead of built-in vimgrep
 let g:netrw_banner = 0                  " Disable netrw banner
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set mmp=1300
 " set foldcolumn=2                        " Folding abilities
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" correct comment syntax highlighting for jsonc 
+autocmd FileType json syntax match Comment +\/\/.\+$+
 " Jenkinsfile VIM syntax highlighting
 au BufNewFile,BufRead Jenkinsfile setf groovy
 

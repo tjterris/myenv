@@ -19,10 +19,15 @@ alias nz='nvim ~/.zshrc'
 alias np='nvim ~/eid/environment/aws/.params'
 alias ns='nvim ~/.secrets'
 alias nzp='nvim ~/.zprofile'
+alias nzsh='nvim ~/.zshenv'
 alias digip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias curlip='curl ifconfig.me'
 alias spd="wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py && chmod +x speedtest-cli && ./speedtest-cli"
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias nh='sudo vi /etc/hosts'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 ## ssh
 
@@ -54,17 +59,17 @@ alias hls='helm list --tls --tiller-namespace=tiller-system -d'
 
 ## distro pkg mgr
 
-#alias sas='sudo apt search'
-#alias sagu='sudo apt-get update'
-#alias sagi="sudo apt-get install"
-#alias sagr='sudo apt-get remove'
-#alias sagp='sudo apt-get purge'
+alias sas='sudo apt search'
+alias sagu='sudo apt-get update'
+alias sagi="sudo apt-get install"
+alias sagr='sudo apt-get remove'
+alias sagp='sudo apt-get purge'
 #alias dnfi='sudo dnf install'
-alias dnfu='sudo dnf update'
-alias dnfr='sudo dnf remove'
-alias dnfs='sudo dnf search'
-alias dnfd='sudo dnf distro-sync'
-alias dnfi='sudo dnf install'
+#alias dnfu='sudo dnf update'
+#alias dnfr='sudo dnf remove'
+#alias dnfs='sudo dnf search'
+#alias dnfd='sudo dnf distro-sync'
+#alias dnfi='sudo dnf install'
 
 ## docker
 
