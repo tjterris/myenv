@@ -15,7 +15,7 @@ fi
 # Put tmux conf in path tmux wants
 [ ! -f $HOME/.tmux.conf ] && ln -s \
        $HOME/.config/tmux/tmux.conf \
-       $HOME/.tmux.conf
+       $HOME/.tmux.conf && tmux source-file ~/.tmux.conf
 
 #[ $commands[tmux] ] && tmux source $HOME/.config/tmux/tmux.conf 
 

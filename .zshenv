@@ -1,7 +1,6 @@
 #export TERMINAL=alacritty
 #export TERM=alacritty
 export TERM=xterm-256color
-export TERMINAL=xterm-256color
 # this ordering of PATH ensures local binaries are seen first
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -17,9 +16,12 @@ export RIPGREP_CONFIG_PATH=$HOME/.config/.ripgreprc
 export HISTTIMEFORMAT="[%F %T] "
 export HISTSIZE=500000
 export HISTFILESIZE=100000000
-export HISTORY_IGNORE='(ls*|ll*|pwd|echo*|cd ..*|cat *|history|gst*|ga *|sz|nz|nzp|v *|which *|man *|fzf|gplom|gck*|gst|nuc|tmux*|tmn*|tma*|ntm*|tmls|tmk*|make*|dkrmunti|vi *)'
+export HISTORY_IGNORE='(ls*|ll*|pwd|echo*|cd ..*|cat *|history|gst*|ga *|sz|nz|nzp|v *|which *|man *|fzf|gplom|gck*|gst|nuc|tmux*|tmn*|tma*|ntm*|tmls|tmk*|make*|dkrmunti|vi *|kpod)'
 export HIST_STAMPS="mm/dd/yyyy"
 export KUBE_EDITOR="nvim"
+export HELM_HOME="$HOME/.helm"
+export HELM_TLS_KEY="$HELM_HOME/key.pem"
+export HELM_TLS_CERT="$HELM_HOME/cert.pem"
 export POETRY_VIRTUALENVS_CREATE=true
 export POETRY_VIRTUALENVS_IN_PROJECT=false
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules}/*' 2> /dev/null"
@@ -33,7 +35,7 @@ export FZF_DEFAULT_OPTS="
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 --prompt='∼ ' 
 --bind '?:toggle-preview'"
-#setopt EXTENDED_HISTORY
+setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS

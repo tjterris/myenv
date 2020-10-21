@@ -29,6 +29,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# clones all repos in github org
+alias gclorg="curl -s https://$GITHUB_API_TOKEN:@api.github.com/orgs/evidentid/repos\?per_page\=200 | jq '.[].ssh_url' | xargs -n 1 git clone"
+
 ## ssh
 
 alias sshconf='nvim ~/.ssh/config'
@@ -91,6 +94,7 @@ alias dorker='docker'
 alias dkrmstc='docker rm $(docker ps -a -q)'
 alias dkrrmc='docker rm $(docker ps -a -q)'
 alias dkrmunti='docker rmi -f $(docker images -q --filter "dangling=true")'
+alias dkr_lint='docker run --rm -i hadolint/hadolint < Dockerfile'
 
 ## selinux 
 
@@ -132,7 +136,8 @@ alias tm="tmux -f ~/.config/tmux/tmux.conf"
 alias tmn="tmux new -f ~/.config/tmux/tmux.conf -s"
 alias tmls="tmux list-sessions"
 alias tma="tmux attach -t"
-alias tmk="tmux kill-session -t" 
+alias tmks="tmux kill-session -t" 
+alias tmkw="tmux kill-window -t"
 alias tmkser="tmux kill-server"
 alias ntm="nvim ~/.config/tmux/tmux.conf"
 alias stm="tmux source-file ~/.config/tmux/tmux.conf"
@@ -179,6 +184,7 @@ alias kdep="kubectl get deployment"
 alias kdepall="kdep --all-namespaces"
 alias kdepdesc="kubectl describe deployment"
 alias kpod="kubectl get pods -o wide"
+alias kcronall="kctl get cronjobs.batch --all-namespaces"
 alias kpodtime="kubectl get pod --sort-by=.status.startTime --all-namespaces"
 alias kpodops="kpod -n ops-tools"
 alias kpoding="kpod -n ingress"
@@ -200,6 +206,7 @@ alias kstg="kctl config use-context staging"
 alias kprd="kctl config use-context prod"
 alias knode="kctl get nodes -w"
 alias kresources="kubectl api-resources"
+alias kdash="az acr login -n evidentid && az aks browse --resource-group=RG-WestUS2-AKS-Dev --name=Development-01"
 
 
 

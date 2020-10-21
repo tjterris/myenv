@@ -25,6 +25,9 @@ tnoremap ;; <C-\><C-n>
 " inoremap <c-u> <ESC>viwUi
 " nnoremap <c-u> viwU<Esc>
 
+" tpopes vim session function
+nnoremap <silent><leader>ss :Obsess<CR>
+
 " TAB in general mode will move to text buffer
 nnoremap <silent> <TAB> :bnext<CR>
 "SHIFT-TAB will go back
@@ -42,6 +45,7 @@ nnoremap QQ :q!<CR>
 
 "nmap <leader>p O<ESC>p
 "nmap <leader>p o<ESC>P
+
 "Better window navigation
 "nnoremap <C-h> <C-w>h
 "nnoremap <C-j> <C-w>j

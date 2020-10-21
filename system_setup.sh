@@ -4,6 +4,9 @@
 sudo apt install zsh || sudo pacman -S zsh || sudo dnf install zsh 
 chsh -s $(which zsh)
 
+# install packages
+sudo apt install jq ripgrep xsel || sudo pacman -S jq ripgrep xsel || sudo dnf install jq ripgrep xsel   
+
 # install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -14,8 +17,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# install rg
-sudo dnf install ripgrep || sudo pacman -S ripgrep || sudo apt-get install ripgrep
 
 # install neovim
 git clone git@github.com:neovim/neovim.git
@@ -64,3 +65,4 @@ sudo dnf install cmake freetype-devel fontconfig-devel libxcb-devel || \
 sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb
 cargo build --release
 cd -
+

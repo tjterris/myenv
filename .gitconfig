@@ -10,6 +10,7 @@
     brc = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     ff = !sh -c 'git submodule update --remote --init --recursive && git pull --ff-only'
+
 [user]
 	name = trevor
 	email = trevor@evidentid.com

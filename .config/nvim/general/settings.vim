@@ -23,6 +23,9 @@ set signcolumn=yes                      " Always show the signcolumn, otherwise 
 set autochdir                           " Your working directory will always be the same as your working directory
 set updatetime=300                      " Faster completion, ideal for coc
 "set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set autoindent
+set smartindent
+set cmdheight=1                         " cmd window height as small as possible
 set noswapfile
 set shortmess+=c                        " Don't pass messages to ins-completion-menu, ideal for coc
 set ignorecase
@@ -40,6 +43,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " correct comment syntax highlighting for jsonc 
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " Jenkinsfile VIM syntax highlighting
 au BufNewFile,BufRead Jenkinsfile setf groovy
 

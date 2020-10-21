@@ -30,16 +30,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
 "    Plug 'sheerun/vim-polyglot'
     Plug 'cespare/vim-toml'  
+
     " Status Line
-"    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'vim-airline/vim-airline'
   
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-   
-    " Git
-    "Plug 'tpope/vim-fugitive'
+
+    " Session mgmt
+    Plug 'tpope/vim-obsession'
 
     " File explorer
 "    Plug 'kevinhwang91/rnvimr'
