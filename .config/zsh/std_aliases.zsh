@@ -28,7 +28,7 @@ alias nh='sudo vi /etc/hosts'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
+alias yacc='bison'
 # clones all repos in github org
 alias gclorg="curl -s https://$GITHUB_API_TOKEN:@api.github.com/orgs/evidentid/repos\?per_page\=200 | jq '.[].ssh_url' | xargs -n 1 git clone"
 

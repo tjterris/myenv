@@ -103,7 +103,7 @@ key_bindings:
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: Key0, mods: Control, action: ResetFontSize }
   - { key: Equals, mods: Control, action: IncreaseFontSize }
-  - { key: Subtract, mods: Control, action: DecreaseFontSize }
+    #  - { key: Subtract, mods: Control, action: DecreaseFontSize }
 
 shell:
   program: /usr/bin/zsh

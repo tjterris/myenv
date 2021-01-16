@@ -2,6 +2,7 @@
 
 # install zsh
 sudo apt install zsh || sudo pacman -S zsh || sudo dnf install zsh 
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 chsh -s $(which zsh)
 
 # install packages
