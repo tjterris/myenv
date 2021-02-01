@@ -20,7 +20,7 @@ set cursorline                          " Enable highlighting of the current lin
 set backspace=start,eol,indent
 set background=dark                     " tell vim what the background color looks like
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
-set autochdir                           " Your working directory will always be the same as your working directory
+" set autochdir                           " Your working directory will always be the same as your working directory
 set updatetime=300                      " Faster completion, ideal for coc
 "set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set autoindent
