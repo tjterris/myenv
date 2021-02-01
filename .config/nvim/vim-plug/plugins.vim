@@ -28,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    " Plug 'editorconfig/editorconfig-vim'
    
     " Better Syntax Support
-"    Plug 'sheerun/vim-polyglot'
+    Plug 'sheerun/vim-polyglot'
     Plug 'cespare/vim-toml'  
 
     " Status Line

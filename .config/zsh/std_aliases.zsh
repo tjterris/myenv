@@ -31,6 +31,7 @@ alias l='ls -CF'
 alias yacc='bison'
 # clones all repos in github org
 alias gclorg="curl -s https://$GITHUB_API_TOKEN:@api.github.com/orgs/evidentid/repos\?per_page\=200 | jq '.[].ssh_url' | xargs -n 1 git clone"
+alias rinowatch='ssh root@45.79.10.12'
 
 ## ssh
 
@@ -62,17 +63,12 @@ alias hls='helm list --tls --tiller-namespace=tiller-system -d'
 
 ## distro pkg mgr
 
-alias sas='sudo apt search'
-alias sagu='sudo apt-get update'
-alias sagi="sudo apt-get install"
-alias sagr='sudo apt-get remove'
-alias sagp='sudo apt-get purge'
-#alias dnfi='sudo dnf install'
-#alias dnfu='sudo dnf update'
-#alias dnfr='sudo dnf remove'
-#alias dnfs='sudo dnf search'
-#alias dnfd='sudo dnf distro-sync'
-#alias dnfi='sudo dnf install'
+alias dnfi='sudo dnf install'
+alias dnfu='sudo dnf update'
+alias dnfr='sudo dnf remove'
+alias dnfs='sudo dnf search'
+alias dnfd='sudo dnf distro-sync'
+alias dnfi='sudo dnf install'
 
 ## docker
 
@@ -133,7 +129,7 @@ alias gd='git diff'
 ## tmux
 
 alias tm="tmux -f ~/.config/tmux/tmux.conf"
-alias tmn="tmux new -f ~/.config/tmux/tmux.conf -s"
+alias tmn="tmux new -s"
 alias tmls="tmux list-sessions"
 alias tma="tmux attach -t"
 alias tmks="tmux kill-session -t" 
@@ -207,6 +203,3 @@ alias kprd="kctl config use-context prod"
 alias knode="kctl get nodes -w"
 alias kresources="kubectl api-resources"
 alias kdash="az acr login -n evidentid && az aks browse --resource-group=RG-WestUS2-AKS-Dev --name=Development-01"
-
-
-

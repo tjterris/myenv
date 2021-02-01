@@ -10,7 +10,11 @@ fi
 [ -f $HOME/eid/environment/aws/.params ] && source $HOME/eid/environment/aws/.params
 [ -f $HOME/eid/environment/aws/.sshparams ] && source $HOME/eid/environment/aws/.sshparams
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 [ -d $HOME/.config/zsh ] && for f in $HOME/.config/zsh/*.zsh; do source $f; done
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Put tmux conf in path tmux wants
 [ ! -f $HOME/.tmux.conf ] && ln -s \
@@ -32,9 +36,9 @@ fi
 [ $commands[helm] ] && source <(helm completion zsh)
 
 # initialize pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+  #eval "$(pyenv init -)"
+#fi
 
 # add and enable custom completion scripts
 fpath+=$HOME/.config/zsh/zfunc && compinit
@@ -49,5 +53,3 @@ fpath+=$HOME/.config/zsh/zfunc && compinit
 #bindkey '^w' backward-kill-word
 bindkey '^f' forward-word
 bindkey '^b' backward-word
-
-

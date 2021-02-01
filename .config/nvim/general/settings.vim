@@ -37,6 +37,7 @@ let g:netrw_banner = 0                  " Disable netrw banner
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set mmp=1300
 " set foldcolumn=2                        " Folding abilities
+set nocompatible                        " Per vim-polyglot
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

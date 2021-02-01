@@ -35,6 +35,7 @@ cd tmux
 sh autogen.sh
 ./configure && make
 cd -
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install awscli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -66,4 +67,3 @@ sudo dnf install cmake freetype-devel fontconfig-devel libxcb-devel || \
 sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb
 cargo build --release
 cd -
-
