@@ -13,15 +13,14 @@ fi
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 [ -d $HOME/.config/zsh ] && for f in $HOME/.config/zsh/*.zsh; do source $f; done
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Put tmux conf in path tmux wants
 [ ! -f $HOME/.tmux.conf ] && ln -s \
        $HOME/.config/tmux/tmux.conf \
        $HOME/.tmux.conf && tmux source-file ~/.tmux.conf
 
-#[ $commands[tmux] ] && tmux source $HOME/.config/tmux/tmux.conf 
+# Loads nvm and nvm bash completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [ ! -f $HOME/.p10k.zsh ] && ln -s \
