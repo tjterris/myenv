@@ -32,7 +32,12 @@ alias l='ls -CF'
 alias yacc='bison'
 # clones all repos in github org
 alias gclorg="curl -s https://$GITHUB_API_TOKEN:@api.github.com/orgs/evidentid/repos\?per_page\=200 | jq '.[].ssh_url' | xargs -n 1 git clone"
-alias rinowatch='ssh root@45.79.10.12'
+alias ws="sudo wireshark"
+
+## vpn sever
+alias rinowatch='ssh -p 69 root@45.79.10.12'
+alias vpnup='sudo systemctl start wg-quick@wg0.service'
+alias vpndown='sudo systemctl stop wg-quick@wg0.service'
 
 ## ssh
 
